@@ -58,16 +58,16 @@ function https_request($url, $data = null)
  */
 
 //替换你的ACCESS_TOKEN
-$ACCESS_TOKEN = json_decode(https_request("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=替换自己的APPID&secret=替换自己的APPSECRET"),true)["access_token"];
+$ACCESS_TOKEN = json_decode(https_request("https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wxa2fa31662ebd0212&secret=fbcf8481bb621d1188a44fe6ae7722b8"),true)["access_token"];
 //模板消息请求URL
 $url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token=" . $ACCESS_TOKEN;
 $MsgArray=array();
 
 //推送的用户
-$MsgArray["touser"]="";
+$MsgArray["touser"]="o1XBP1DDFaCD-wWZQV_Af5ssDisc";
     
 //推送的模板编号
-$MsgArray["template_id"]="";
+$MsgArray["template_id"]="YsudT-Ow_et72RlfJy1zgm8wZKyQHzvxSUS5SGwsSWE";
 
 //标题是可选值
 if(!isset($_REQUEST['title'])){
